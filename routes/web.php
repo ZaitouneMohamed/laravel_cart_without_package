@@ -23,6 +23,7 @@ Route::get('/', function () {
 
 Route::controller(HomeController::class)->group(function(){
     Route::get('/cart',  "cart")->name("cart");
+    Route::get('/GetProducts',  "GetProducts")->name("getProducts");
     Route::get('/shopping-cart', 'productCart')->name('shopping.cart');
     Route::get('/product/{id}', 'addProducttoCart')->name('addProduct.to.cart');
     Route::patch('/update-shopping-cart', 'updateCart')->name('update.sopping.cart');

@@ -59,4 +59,9 @@ class HomeController extends Controller
         $hii = $test->SimpleTest("hello world");
         dd($hii);
     }
+
+    function GetProducts(){
+        $products = Product::all();
+        return response()->json($products);
+    }
 }
